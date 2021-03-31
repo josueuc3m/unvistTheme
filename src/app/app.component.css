@@ -12,7 +12,7 @@
     flex-flow: column;
     padding: 3em;
     height: fit-content;
-    border: 1px dotted #d2d2d2;
+    border: 1px dotted var(--softGray);
     margin: auto;
 }
 
@@ -28,7 +28,7 @@
 .wrapper>.formControl,
 .wrapper>.formCheck {
     margin: 0 1rem 1rem 0;
-    width: 15rem;
+    /* width: 15rem; */
 }
 
 .wrapper>button {
@@ -42,6 +42,36 @@
     position: relative;
     display: flex;
     height: fit-content;
+    flex-flow: column;
+}
+
+.formControl>label {
+    font-size: 0.8125rem;
+    margin: 0 0 0.25rem 0.25rem;
+    color: var(--softBlue);
+    font-weight: 400;
+}
+
+.formControlLeftLabel {
+    flex-flow: row;
+}
+
+.formControlLeftLabel>label {
+    margin: .75rem .5rem auto 0;
+    width: 11rem;
+    text-align: right;
+}
+
+.successFormControl>input {
+    color: var(--green);
+}
+
+.errorFormControl>input {
+    color: var(--orange);
+}
+
+.outputFormControl>input {
+    color: var(--darkGray);
 }
 
 .errorFormControl>input,
@@ -93,7 +123,7 @@
 }
 
 .successFormControl>input:focus {
-    border-color: #5ea830;
+    border-color: var(--green);
 }
 
 .successFormControl:after {
@@ -109,15 +139,16 @@
 }
 
 .errorFormControl>input:focus {
-    border-color: #e75a10;
+    border-color: var(--orange);
 }
 
 input {
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: white;
+    /* border: 1px solid #ddd; */
+    border: 1px solid var(--darkGray);
     border-radius: 5px;
-    color: #2c3d46;
+    color: var(--darkBlue);
     font-size: 0.8571rem;
     padding: 0.625rem 0.75rem;
     height: 2.5rem;
@@ -128,15 +159,15 @@ input {
 }
 
 input:focus {
-    background-color: #fff;
-    border: 1px solid #2c3d46;
+    background-color: white;
+    border: 1px solid var(--darkBlue);
     box-shadow: none;
     outline: 0!important;
 }
 
 input::placeholder {
     font-size: 0.75rem;
-    color: #c2c2c2;
+    color: var(--darkGray);
     font-weight: 300;
 }
 
@@ -151,7 +182,7 @@ input:disabled {
 
 input:read-only {
     pointer-events: none;
-    background-color: #f2f2f2;
+    background-color: var(--softGray);
 }
 
 
@@ -166,8 +197,8 @@ button {
     /* padding: 11px 22px; */
     padding: 0.5rem 1.25em;
     cursor: pointer;
-    background-color: #e75a10f2;
-    color: #fff;
+    background-color: var(--orange);
+    color: white;
     display: inline-block;
     text-align: center;
     white-space: nowrap;
@@ -179,14 +210,14 @@ button {
 }
 
 .buttonPrimary {
-    background-color: #e75a10f2;
-    color: #fff;
+    background-color: var(--orange);
+    color: white;
 }
 
 .buttonSecondary {
-    background-color: #fff;
-    color: #e75a10f2;
-    border-color: #e75a10f2;
+    background-color: white;
+    color: var(--orange);
+    border-color: var(--orange);
 }
 
 button:not(:disabled):not(.disabled) {
@@ -208,16 +239,15 @@ button:hover {
 
 .formCheck {
     position: relative;
-    display: block;
-    padding-left: 1.25rem;
+    display: flex;
 }
 
 .formCheck>label {
-    display: inline-block;
+    display: flex;
     position: relative;
     cursor: pointer;
-    padding-left: 2rem;
-    line-height: 1.4rem;
+    padding-left: 1.75rem;
+    line-height: 1.125rem;
     margin-bottom: 0;
     transition: color .3s linear;
     font-size: 0.8571rem;
@@ -237,14 +267,14 @@ button:hover {
 .formCheck .formCheckSign::before {
     content: " ";
     position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
     left: 0;
     cursor: pointer;
     border-radius: 5px;
     top: 0;
     background-color: transparent;
-    border: 1px solid #e3e3e3;
+    border: 1px solid var(--darkGray);
     transition: opacity .3s linear, background-color .3s linear, border-color .3s linear;
 }
 
@@ -254,8 +284,8 @@ button:hover {
 }
 
 .formCheck input[type=checkbox]:checked+.formCheckSign::after {
-    background-color: #2c3d46;
-    border-color: #2c3d46;
+    background-color: var(--darkBlue);
+    border-color: var(--darkBlue);
     opacity: 1;
 }
 
@@ -270,10 +300,10 @@ button:hover {
 .formCheckRadio .formCheckSign::after,
 .formCheckRadio .formCheckSign::before {
     content: " ";
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
-    border: 1px solid #e3e3e3;
+    border: 1px solid var(--darkGray);
     position: absolute;
     transition: opacity .3s linear;
 }
@@ -286,11 +316,13 @@ button:hover {
 .formCheckRadio input[type=radio]:checked+.formCheckSign::after {
     width: .25rem;
     height: .25rem;
-    background-color: #2c3d46;
-    border-color: #2c3d46;
-    top: 0.5rem;
-    left: 0.5rem;
+    background-color: var(--darkBlue);
+    border-color: var(--darkBlue);
+    top: 0;
+    left: 0.39rem;
     opacity: 1;
+    bottom: 0;
+    margin: auto;
 }
 
 
@@ -301,13 +333,18 @@ button:hover {
     width: 9rem;
     margin: 0 3rem 3rem 0;
     display: flex;
+    flex-flow: column;
     border-radius: 5px;
 }
 
 .color>p {
-    margin: auto;
-    color: #fff;
+    margin: auto auto 0 auto;
+    color: white;
     font-size: 0.8571rem;
+}
+
+.color>p:last-of-type {
+    margin: auto;
 }
 
 .darkBlue {

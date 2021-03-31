@@ -38,10 +38,10 @@ body {
 
 :root {
     --darkBlue: #2c3d46;
-    --softBlue: #2f6a8a;
-    --yellow: #fac911;
-    --green: #5ea830;
-    --orange: #e75a10;
+    --softBlue: #2f6a8acc;
+    --yellow: #fac911d9;
+    --green: #5ea830e6;
+    --orange: #e75a10f2;
     --softGray: #f2f2f2;
     --darkGray: #c2c2c2;
     --breakpoint-xs: 0;
@@ -57,4 +57,9 @@ body {
 
 .verticalSpacer {
     flex: 1;
+}
+
+.column {
+    display: flex;
+    flex-flow: column;
 }

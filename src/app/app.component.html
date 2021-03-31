@@ -16,34 +16,56 @@
         </div>
 
         <div class="formControl successFormControl">
-            <input type="text" placeholder="Success">
+            <input type="text" placeholder="Success" value="Well done!">
         </div>
 
         <div class="formControl errorFormControl">
-            <input type="text" placeholder="Error">
+            <input type="text" placeholder="Error" value="Something's wrong!">
         </div>
 
         <div class="formControl" [ngClass]="{'disabledFormControl': !visiblePassword}">
-            <input type="text" [placeholder]="!visiblePassword ? 'Disabled' : 'Enabled'" [disabled]="!visiblePassword ? true : false">
+            <input type="text" [placeholder]="!visiblePassword ? 'Disabled' : 'Enabled'" [disabled]="!visiblePassword ? true : false" value="Try edit me">
+        </div>
+
+        <div class="formControl outputFormControl">
+            <input type="text" placeholder="Output" readonly value="11/09/2021">
         </div>
 
         <div class="formControl">
-            <input type="text" placeholder="Output" readonly>
-        </div>
-
-        <div class="formControl">
-            <input type="text" placeholder="Required" required>
+            <input type="text" placeholder="Required" required value="I can't be empty">
         </div>
 
         <div class="formControl rightImageFormControl">
-            <input type="text" placeholder="Image on the right">
-            <img src="assets/logos/linkedIn.svg">
+            <input type="text" placeholder="Image on the right" value="@jfernanv">
+            <img src="assets/logos/twitter.svg">
         </div>
 
         <div class="formControl leftImageFormControl">
-            <input type="text" placeholder="Image on the left">
+            <input type="text" placeholder="Image on the left" value="josuefernandez">
             <img src="assets/logos/linkedIn.svg">
         </div>
+
+    </div>
+
+    <!-- ------------ -->
+    <!-- INPUT LABELS -->
+    <!-- ------------ -->
+
+    <h3>Input labels</h3>
+
+    <div class="wrapper column">
+
+        <div class="formControl">
+            <label>Label on top:</label>
+            <input type="text" placeholder="Choose a nickname ...">
+        </div>
+
+        <div class="formControl formControlLeftLabel">
+            <label>Label on the left:</label>
+            <input type="text" placeholder="Choose a nickname ...">
+        </div>
+
+
 
     </div>
 
@@ -58,7 +80,7 @@
 
         <div class="formControl passwordFormControl">
 
-            <input #passwordInput type="password" placeholder="Password">
+            <input #passwordInput type="password" placeholder="Password" value="curiosity killed the cat">
 
             <img class="clickable" *ngIf="!visiblePassword; else visiblePasswordTemplate" src="assets/logos/visibility.svg" (click)="toggleVisiblePassword()">
             <ng-template #visiblePasswordTemplate>
@@ -177,25 +199,32 @@
 
     <div class="wrapper">
 
-        <div class="color darkBlue">
-            <p>#2c3d46</p>
-        </div>
-        <div class="color softBlue">
-            <p>#2f6a8a</p>
+        <div class="color orange">
+            <p>orange</p>
+            <p>#e75a10f2 (95%)</p>
         </div>
         <div class="color green">
-            <p>#5ea830</p>
+            <p>green</p>
+            <p>#5ea830e6 (90%)</p>
         </div>
         <div class="color yellow">
-            <p>#fac911</p>
+            <p class="dark">yellow</p>
+            <p class="dark">#fac911d9 (85%)</p>
         </div>
-        <div class="color orange">
-            <p>#e75a10</p>
+        <div class="color softBlue">
+            <p>softBlue</p>
+            <p>#2f6a8acc (80%)</p>
+        </div>
+        <div class="color darkBlue">
+            <p>darkBlue</p>
+            <p>#2c3d46</p>
         </div>
         <div class="color softGray">
+            <p class="dark">softGray</p>
             <p class="dark">#f2f2f2</p>
         </div>
         <div class="color darkGray">
+            <p class="dark">darkGray</p>
             <p class="dark">#c2c2c2</p>
         </div>
 
