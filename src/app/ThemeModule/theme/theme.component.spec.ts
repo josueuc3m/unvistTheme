@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TCMinputTextComponent } from './tcminput-text.component';
+import { ThemeComponent } from './theme.component';
 
-describe('TCMinputTextComponent', () => {
-  let component: TCMinputTextComponent;
-  let fixture: ComponentFixture<TCMinputTextComponent>;
+describe('ThemeComponent', () => {
+  let component: ThemeComponent;
+  let fixture: ComponentFixture<ThemeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TCMinputTextComponent ]
+      declarations: [ ThemeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TCMinputTextComponent);
+    fixture = TestBed.createComponent(ThemeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,36 @@
+<div class="logo">
+    <img src="assets/logos/unvist +.png" alt="">
+</div>
+
+<div class="login">
+
+    <h1>Log in</h1>
+
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+        <!-- Username -->
+        <div class="formControl">
+            <label>Username:</label>
+            <input formControlName="email" type="text" placeholder="Username" required>
+        </div>
+
+        <!-- Password -->
+        <div class="formControl passwordFormControl">
+
+            <label>Password:</label>
+            <input #passwordInput formControlName="password" type="password" placeholder="Password" required>
+
+            <img class="clickable" *ngIf="!visiblePassword; else visiblePasswordTemplate" src="assets/UIKit/visibility.svg" (click)="toggleVisiblePassword()">
+            <ng-template #visiblePasswordTemplate>
+                <img class="clickable" src="assets/UIKit/visibility_off.svg" (click)="toggleVisiblePassword()">
+            </ng-template>
+
+        </div>
+
+        <p class="error" *ngIf="errors">Las credenciales de acceso no son correctas</p>
+
+        <button class="buttonPrimary" type="submit">Log in</button>
+
+    </form>
+
+</div>

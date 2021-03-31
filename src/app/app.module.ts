@@ -4,18 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TCMinputTextComponent } from './UIKit/tcminput-text/tcminput-text.component';
+import { AuthModule } from './AuthModule/auth.module';
+import { ThemeModule } from './ThemeModule/theme.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TCMinputTextComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+
+    AuthModule,
+    ThemeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

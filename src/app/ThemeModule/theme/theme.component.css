@@ -1,0 +1,138 @@
+:host {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    overflow: auto;
+}
+
+.logo {
+    display: flex;
+    height: 5rem;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo>img {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo>button {
+    height: fit-content;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+}
+
+
+/* Container */
+
+.container {
+    display: flex;
+    flex-flow: column;
+    padding: 3em;
+    height: fit-content;
+    border: 1px dotted var(--softGray);
+    margin: auto;
+}
+
+
+/* Wrapper */
+
+.wrapper {
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: 1em;
+}
+
+.wrapper>.formControl,
+.wrapper>.formCheck {
+    margin: 0 1rem 1rem 0;
+}
+
+.wrapper>button {
+    margin: 0 1rem 1rem 0;
+}
+
+
+/* Colors */
+
+.color {
+    height: 4rem;
+    width: 9rem;
+    margin: 0 3rem 3rem 0;
+    display: flex;
+    flex-flow: column;
+    border-radius: 5px;
+}
+
+.color>p {
+    margin: auto auto 0 auto;
+    color: white;
+    font-size: 0.8571rem;
+}
+
+.color>p:last-of-type {
+    margin: auto;
+}
+
+.darkBlue {
+    background-color: var(--darkBlue);
+}
+
+.softBlue {
+    background-color: var(--softBlue);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
+.yellow {
+    background-color: var(--yellow);
+}
+
+.softGray {
+    background-color: var(--softGray);
+}
+
+.darkGray {
+    background-color: var(--darkGray);
+}
+
+.dark {
+    color: var(--darkBlue)!important;
+}
+
+
+/* Typographies */
+
+.columnItem {
+    display: flex;
+    height: fit-content;
+    width: 100%;
+}
+
+.columnItem>span {
+    height: fit-content;
+    width: 5rem;
+    font-size: 0.8571rem;
+    margin: auto 3rem auto 0;
+    color: var(--darkBlue);
+}
+
+.columnItem>span:last-of-type {
+    margin: auto 0;
+    width: fit-content;
+    min-width: fit-content;
+    text-align: right;
+}
