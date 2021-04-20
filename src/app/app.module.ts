@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './AuthModule/auth.module';
+import { TCMsharedModule } from './TCMsharedModule/tcmshared.module';
 import { ThemeModule } from './ThemeModule/theme.module';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { ThemeModule } from './ThemeModule/theme.module';
 
     AuthModule,
     ThemeModule,
+    TCMsharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
