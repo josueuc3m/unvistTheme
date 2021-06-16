@@ -9,6 +9,8 @@ import { TCMcomboBoxOption } from 'src/app/TCMsharedModule/TCMsharedModel/tcmsha
 })
 export class ThemeComponent implements OnInit {
 
+  condition = false;
+
   @ViewChild('passwordInput') passwordInput: ElementRef;
 
   options: TCMcomboBoxOption[] = [
@@ -37,14 +39,8 @@ export class ThemeComponent implements OnInit {
   ngOnInit() { }
 
   toggleVisiblePassword() {
-
     this.visiblePassword = !this.visiblePassword;
-
-    if (this.visiblePassword) {
-      this.passwordInput.nativeElement.type = 'text';
-    } else {
-      this.passwordInput.nativeElement.type = 'password';
-    }
+    this.passwordInput.nativeElement.focus();
   }
 
   logout() {

@@ -1,6 +1,5 @@
 <div class="logo">
     <img src="assets/logos/unvist +.png" alt="">
-    <button class="buttonSecondary" (click)="logout()">Log out</button>
 </div>
 
 <div class="container">
@@ -80,14 +79,22 @@
     <div class="wrapper">
 
         <div class="formControl passwordFormControl">
+            <input #passwordInput [type]="visiblePassword ? 'text' : 'password'" placeholder="Password" value="curiosity killed the cat">
+            <img class="clickable" [src]="visiblePassword ? 'assets/UIKit/visibility_off.svg' : 'assets/UIKit/visibility.svg'" (click)="toggleVisiblePassword()">
+        </div>
 
-            <input #passwordInput type="password" placeholder="Password" value="curiosity killed the cat">
+    </div>
 
-            <img class="clickable" *ngIf="!visiblePassword; else visiblePasswordTemplate" src="assets/UIKit/visibility.svg" (click)="toggleVisiblePassword()">
-            <ng-template #visiblePasswordTemplate>
-                <img class="clickable" src="assets/UIKit/visibility_off.svg" (click)="toggleVisiblePassword()">
-            </ng-template>
+    <!-- -------- -->
+    <!-- TEXTAREA -->
+    <!-- -------- -->
 
+    <h3>Textarea</h3>
+
+    <div class="wrapper column">
+
+        <div class="formControl">
+            <textarea></textarea>
         </div>
 
     </div>
@@ -102,6 +109,14 @@
 
         <div class="formCheck">
             <label>Unchecked
+                <input type="checkbox">
+                <span class="formCheckSign">
+                </span>
+            </label>
+        </div>
+
+        <div class="formCheck smallFormCheck">
+            <label>Small unchecked
                 <input type="checkbox">
                 <span class="formCheckSign">
                 </span>
@@ -144,6 +159,14 @@
 
         <div class="formCheck formCheckRadio">
             <label>Unchecked
+                <input type="radio">
+                <span class="formCheckSign">
+                </span>
+            </label>
+        </div>
+
+        <div class="formCheck formCheckRadio smallFormCheck">
+            <label>Small unchecked
                 <input type="radio">
                 <span class="formCheckSign">
                 </span>
@@ -197,7 +220,9 @@
     <div class="wrapper">
 
         <button type="button" class="buttonPrimary">Primary</button>
+        <button type="button" class="buttonPrimary" disabled>Primary</button>
         <button type="button" class="buttonSecondary">Secondary</button>
+        <button type="button" class="buttonSecondary" disabled>Secondary</button>
 
     </div>
 
@@ -320,7 +345,16 @@
 
     <h1>Tooltips</h1>
 
-    <div class="wrapper"></div>
+    <div class="wrapper">
+
+        <div class="color darkBlue" TCMtooltip>
+            <p>See tooltip!</p>
+            <ng-template #tooltipTemplate>
+                <div class="tooltip">This is my tooltip! </div>
+            </ng-template>
+        </div>
+
+    </div>
 
     <!-- --------------- -->
     <!-- DATETIME PICKER -->
